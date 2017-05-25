@@ -11,6 +11,7 @@ html {
 }
 body {
   margin: 0;
+  padding-top: 45px;
 }
 article,
 aside,
@@ -20,10 +21,11 @@ figure,
 footer,
 header,
 hgroup,
-main,
 menu,
 nav,
 section,
+main,
+footer,
 summary {
   display: block;
 }
@@ -6755,3 +6757,10 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+@media (min-width: 768px) {
+  .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+}
