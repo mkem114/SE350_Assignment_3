@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <!---jquery and bootstrap are included as offline files for the marker's convenience. Obviously would use the Google jquery url as it's normally cached-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SOFTENG 350 | Papr</title>
+</head>
+<body>
+    <div class="wrapper">
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">UoA</a>
+                </div>
+                <ul class="nav navbar-nav navbar-center">
+                    <li class="active"><a href="#">SOFTENG350</a></li>
+                    <li><a href="#">SOFTENG351</a></li>
+                    <li><a href="#">SOFTENG364</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbspCarlos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Heading goes here</h1>
+        <div class="row">
+            <div class="col-sm-10 col-sm-push-2">
+                <div id="center">
+                <hr>
+                <strong>Worth: </strong>XX% <strong>Starts: </strong>DD MM TT <strong>Due: </strong>DD MM TT <strong>Time limit: </strong>XXmins <strong>Attempts Remaining: </strong> &infin;
+                <hr>
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h3>Lorem Ipsum</h3>dolor sit amet, consectetur adipiscing elit. Nulla ac massa rutrum, faucibus mauris scelerisque, dictum diam. Proin pulvinar massa molestie, tincidunt magna a, tincidunt ipsum. Curabitur ultricies congue ligula sed egestas. Duis tincidunt, nunc a rhoncus accumsan, ligula ex tristique ex, sed dapibus nulla enim non nibh. Nullam egestas erat lacinia felis tempor pharetra. Quisque porttitor luctus leo. Sed et nibh vel orci sodales accumsan. Vivamus commodo tristique arcu sit amet viverra. Integer in finibus lorem, non viverra massa.</div>
+                        <div class="panel-body">
+                            <textarea class="form-control vresize" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-default"><strong>Submit</strong></button>
+                </div>
+                    <p>
+                        Mauris non sollicitudin quam, non ullamcorper leo. Curabitur sit amet mi sed leo commodo tempor. Vestibulum eget augue libero. Mauris condimentum posuere dui ac convallis. Suspendisse fringilla nisl a maximus faucibus. Integer turpis erat, tempor eget augue eu, dictum pulvinar odio. In sit amet egestas turpis. Sed quis hendrerit nisl. Aenean vel tellus nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean nec convallis justo, placerat sodales odio. Aliquam pulvinar mi nec dui venenatis, eget blandit tortor aliquet. Quisque eu finibus purus. Maecenas tincidunt convallis ligula. Curabitur nisi quam, consequat a mi in, pulvinar fermentum ligula. Vestibulum consectetur suscipit luctus.
+                    </p><p>
+                        Morbi eleifend sollicitudin purus aliquam molestie. In accumsan lectus ut diam vehicula, id viverra libero gravida. Nunc rhoncus eget eros at rutrum. Cras faucibus odio vitae gravida sollicitudin. Morbi lacinia placerat arcu, a placerat lectus hendrerit sit amet. Morbi porttitor tincidunt dui, sed accumsan risus aliquam sodales. Vestibulum tellus felis, fermentum eu sagittis a, placerat nec diam. Quisque vel lobortis erat. Cras malesuada elit ut consectetur tempor. Fusce et facilisis lectus, eu dictum ipsum. In hac habitasse platea dictumst. Ut sit amet cursus risus. Vivamus vitae aliquam eros.
+                    </p><p>
+                        Aenean eget consequat erat. Integer facilisis risus ac justo ornare aliquet. Nullam et metus ut mi consequat congue ac et arcu. Mauris a elit vel dolor viverra aliquet. Curabitur a urna eu massa aliquet eleifend ut ac massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla ut leo sapien. Pellentesque eleifend libero eget velit molestie, vel consequat ex feugiat. Proin elementum consequat nulla, eget pulvinar arcu ullamcorper in. Sed a efficitur magna. Pellentesque laoreet id libero ut suscipit.
+                    </p><p>
+                        In egestas ornare purus et luctus. Quisque sed mauris et diam bibendum sollicitudin pellentesque dictum odio. Nullam elit elit, scelerisque ut enim vel, commodo viverra justo. Proin sed elit libero. Nulla mauris libero, tincidunt et feugiat id, vestibulum sit amet tortor. Phasellus condimentum, augue in ullamcorper euismod, leo lectus ornare ipsum, sit amet aliquet neque sapien dignissim urna. Morbi luctus lacus nec dapibus ullamcorper. Morbi in dapibus nibh. Proin consectetur orci in mauris aliquet viverra. Maecenas id commodo mauris. Curabitur odio massa, finibus sit amet posuere non, condimentum a orci. Praesent cursus pharetra eros ac suscipit.
+                    </p><p>
+                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer ornare metus id erat efficitur commodo. Phasellus laoreet sit amet nulla ut consectetur. Sed ac venenatis leo. Proin sollicitudin, nisl at dignissim ultricies, nisl ante malesuada arcu, in mollis enim lorem ut orci. Donec in mattis augue. Vivamus eget velit sit amet ex egestas consequat vel quis ipsum.
+                    </p><p>
+                        Etiam arcu leo, auctor sed risus vitae, efficitur posuere felis. Ut iaculis tempus tempor. Ut auctor pellentesque massa et aliquet. Curabitur et maximus nibh, vitae fringilla augue. Nam eleifend enim purus, sed semper lacus scelerisque consequat. Maecenas bibendum vulputate purus, eget lobortis leo elementum eget. Vestibulum dictum purus vel nunc tristique, eget fringilla nulla malesuada. Integer efficitur suscipit neque, a viverra enim maximus vitae. Aliquam venenatis est ut lacus rutrum scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras volutpat posuere quam, eu imperdiet magna pulvinar non. Proin eu aliquet mi.
+                    </p><p>
+                        Suspendisse iaculis sagittis condimentum. Suspendisse aliquet, neque vel dictum scelerisque, urna elit dignissim ex, vel ullamcorper massa nisi vitae ex. Pellentesque facilisis ornare mattis. Nullam risus dolor, eleifend scelerisque urna vitae, euismod auctor dolor. Nunc posuere eros ipsum, ut rutrum massa congue eu. Nunc ac vestibulum diam, sit amet lacinia tellus. Mauris sit amet molestie tellus. Phasellus feugiat, dolor id rutrum ultrices, erat lectus aliquet dui, a egestas justo nunc vel ligula. Nullam feugiat ante velit, scelerisque tristique velit ullamcorper at. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras blandit placerat nisi, vel hendrerit eros auctor hendrerit. Maecenas nunc metus, convallis at efficitur et, ornare vel dui.
+                    </p><p>
+                        Aenean sodales at justo vel suscipit. Duis dapibus, ex vel aliquam vestibulum, nisl metus faucibus magna, non ultricies arcu arcu sed velit. Vivamus a risus ex. Morbi nec ipsum ut odio tristique hendrerit. Pellentesque maximus eget dui quis eleifend. Mauris bibendum mollis nisl non efficitur. Sed sit amet est et nisl fermentum consectetur ac vel arcu. Maecenas in tincidunt orci, a ornare tortor. Nunc consequat mauris sit amet metus porta, imperdiet vehicula nunc pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce scelerisque, felis vel commodo molestie, libero turpis consequat velit, ut egestas nunc magna nec ligula. Fusce sodales auctor turpis non posuere. Quisque feugiat nulla suscipit eros convallis, sit amet aliquam erat posuere. Sed ut enim turpis. Quisque quis orci purus.
+                    </p><p>
+                        Nullam at erat at mauris fermentum laoreet non at lorem. Ut ac lacus non quam pellentesque ullamcorper a ut magna. Nullam vitae sapien aliquet, congue est quis, ornare lectus. Vestibulum tellus dolor, eleifend sit amet leo sed, dapibus cursus ipsum. Integer dignissim eleifend ipsum bibendum viverra. Praesent laoreet metus nec lorem euismod, pulvinar faucibus diam cursus. Nullam varius mauris neque, vitae posuere diam sollicitudin a. Pellentesque et cursus urna, eu maximus nunc. Donec venenatis aliquam est, luctus facilisis neque egestas at. Nunc in facilisis felis, sed tempus ipsum. Quisque erat risus, fermentum porta dolor a, pulvinar sodales est. Donec fermentum ullamcorper nibh in rutrum. Mauris vel dui eget nulla eleifend vulputate nec id elit.
+                    </p>
+                </div>
+            <div class="col-sm-2 col-sm-pull-10">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">Assignments</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    </div>
+    <footer class="footer">
+        <a href="#"><a href="#">About</a> &nbsp&nbsp&nbsp| &nbsp&nbsp&nbsp <a href="#">Terms</a> &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp <a href="#">Help</a> &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp <a href="#">Privacy</a> &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp <a href="#">FAQ</a>
+    </footer>
+</body>
+</html>

@@ -9,9 +9,35 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -40px;
+  padding-bottom: 40px;
+}
+footer {
+  height: 40px;
+}
 body {
   margin: 0;
   padding-top: 45px;
+}
+.footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  color: #999;
+}
+footer a {
+  color: #999;
+}
+header, main{
+  background-color: #f9f9f9;
 }
 article,
 aside,
@@ -64,6 +90,7 @@ dfn {
 h1 {
   margin: .67em 0;
   font-size: 2em;
+  text-align: center;
 }
 mark {
   color: #000;
@@ -1088,7 +1115,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color: #f9f9f9;
 }
 input,
 button,
@@ -1145,11 +1172,20 @@ img {
 .img-circle {
   border-radius: 50%;
 }
-hr {
+<!--hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eee;
+}-->
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
 }
 .sr-only {
   position: absolute;
@@ -4102,6 +4138,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #337ab7;
 }
 .nav-stacked > li {
+  font-weight:bold;
   float: none;
 }
 .nav-stacked > li + li {
@@ -4591,6 +4628,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #222;
   border-color: #080808;
 }
@@ -6759,8 +6797,25 @@ button.close {
 /*# sourceMappingURL=bootstrap.css.map */
 @media (min-width: 768px) {
   .navbar-nav.navbar-center {
+    font-weight:bold;
     position: absolute;
     left: 50%;
     transform: translatex(-50%);
   }
+}
+
+#center {
+  text-align: center;
+}
+.panel-body {
+  background-color: #f9f9f9;
+  text-align: left;
+}
+.panel-heading {
+  text-align: left;
+}
+#submit {
+  width: 100%;
+  color: #fff;
+  background-color: #337ab7;
 }
