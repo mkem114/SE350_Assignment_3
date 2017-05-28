@@ -33,6 +33,26 @@
         <div class="row">
             <div class="col-sm-9 col-sm-push-3">
                 <div id="center">
+                    <script>
+                        var smaq1 = document.querySelector("#smaq1");
+                        if (window.localStorage.getItem("smaq1")) {
+                            smaq1.value = window.localStorage.getItem("smaq1");
+                        }
+                        var smaq2 = document.querySelector("#smaq2");
+                        if (window.localStorage.getItem("smaq2")) {
+                            smaq2.value = window.localStorage.getItem("smaq2");
+                        }
+                        function submit() {
+                            var smaq1 = document.getElementById("smaq1").value ;
+                            localStorage.setItem("smaq1", smaq1) ;
+                            var smaq2 = document.getElementById("smaq2").value ;
+                            localStorage.setItem("smaq2", smaq2) ;
+                            window.location.href='Assessments.html';
+                        }
+                    </script>
+
+
+
                     <hr>
                     <strong>Worth: </strong>2% <strong>Starts: </strong>20th March 17:00 <strong>Due: </strong>27th March 17:00
                     <strong>Attempts Remaining: </strong> &infin;
@@ -56,7 +76,7 @@
                             <textarea class="form-control vresize" rows="3" id="smaq2"></textarea>
                         </div>
                     </div>
-                    <button type="submit" id="submit" class="btn btn-default"><strong>Submit</strong></button>
+                    <button type="submit" id="submit" onclick="submit()" class="btn btn-default"><strong>Submit</strong></button>
                 </div>
             </div>
             <div class="col-sm-3 col-sm-pull-9">

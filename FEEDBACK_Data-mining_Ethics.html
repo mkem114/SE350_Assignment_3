@@ -34,6 +34,18 @@
         <div class="row">
             <div class="col-sm-9 col-sm-push-3">
                 <div id="center">
+                    <script>
+                        sessionStorage.getItem("fbdmeq1");
+                        $("#fbdmeq1").val("test");
+                        function submit() {
+                            var fbdmeq1 = document.querySelector("#fbdmeq1");
+                            window.sessionStorage["fbdmeq1"] = fbdmeq1.value;
+                            window.location.href='Assessments.html';
+                        }
+                    </script>
+
+
+
                     <hr>
                     <strong>Worth: </strong>1% <strong>Starts: </strong>27th May 00:00 <strong>Due: </strong>14th June 23:59
                     <strong>Attempts Remaining: </strong> &infin;
@@ -53,7 +65,7 @@
                             <textarea class="form-control vresize" rows="3" id="fbdmeq1"></textarea>
                         </div>
                     </div>
-                    <button type="submit" id="submit" class="btn btn-default"><strong>Submit</strong></button>
+                    <button type="submit" id="submit" onclick="submit()" class="btn btn-default"><strong>Submit</strong></button>
                 </div>
             </div>
             <div class="col-sm-3 col-sm-pull-9">
