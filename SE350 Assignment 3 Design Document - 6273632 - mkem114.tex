@@ -1,3 +1,7 @@
+%TO-DO 
+%Merge PDFS
+%Grammerly
+%Implement submit linking and saving state
 \documentclass[10pt,a4paper]{article}
 	\usepackage[utf8]{inputenc}
 	\usepackage{wrapfig}
@@ -13,6 +17,7 @@
 	\usepackage[english]{babel}
 	\usepackage{titlesec}
 	\usepackage{enumitem}
+	\usepackage[final]{pdfpages}
 	\usepackage{subcaption}
 	\usepackage[style=apa,natbib]{biblatex}
 	\usepackage[pages=some]{background}
@@ -26,6 +31,7 @@
 \title{Papr $|$ SOFTENG 350 Assignment \# 3 Design Document}
 
 \begin{document}
+
 	\definecolor{orangeBack}{RGB}{51, 122, 183}
 	\pagestyle{fancy}
 	\fancyhf{}
@@ -43,6 +49,7 @@
 
 \maketitle
 \tableofcontents
+\listoffigures
 \newpage
 
 \section{Walk-through}
@@ -50,7 +57,7 @@
 	
 	Their lecturer sets them an assessment on Papr (the learning content and management system) which has relevant information for them to review before answering each question. (\cref{fig:one})
 	
-	When the students ``Submit'' the answers are saved and they are taken back to their list of assessments. (\cref{fig:two}) After the deadline their answers are sent to their peers to provide feedback on their answers. They can then give their peers feedback on their answers by clicking on assessments with ``Feedback:'' in the title. (\cref{fig:two})
+	When the students ``Submit'' the answers are saved and they are taken back to their list of assessments. (\cref{fig:two}) After the deadline, their answers are sent to their peers to provide feedback on their answers. They can then give their peers feedback on their answers by clicking on assessments with ``Feedback:'' in the title. (\cref{fig:two})
 	
 	Students can give feedback on their peer's answers and can refresh their memory by viewing the relevant questions and case. (\cref{fig:three}) When they click ``Submit'' their feedback is saved and they are taken back to the list of assessments. (\cref{fig:four})
 	
@@ -90,14 +97,14 @@
 	\end{figure}
 
 	\subsection*{Out of Scope}
-	Due to time constraints, irrelevancy, the fact this is a prototype and technical limitations there are some things which are out of scope. This fall into two categories:
+	Due to time constraints, irrelevancy, the fact this is a prototype and technical limitations, there are some things which are out of scope. This fall into two categories:
 		\subsubsection*{UI not implemented}
 			\begin{itemize}
 				\item WYSIWYG editors were not implemented because of the complexity of saving formatted text without a back-end and it's inappropriate for the short nature of the example questions.
-				\item Other question types like check-boxes and MCQs were not implemented due to saving without a backend and it doesn't further illustrate the point of the prototype (it is possible).
-				\item Tool-tips were not included as there are no features thought to be too complex or without labels to understand.		
+				\item Other question types like checkboxes and MCQs were not implemented due to saving without a backend and it doesn't further illustrate the point of the prototype (it is possible).
+				\item tooltips were not included as there are no features thought to be too complex or without labels to understand.		
 				\item A quickly dismissed or disappearing banner or alert to show answers or feedback being saved before redirection back to assessments (requires a back-end or a more complex prototype).
-				\item Real time use of two users to see feedback appearing after being given due to needing a back end or becoming too complex for a prototype.
+				\item Real-time use of two users to see feedback appearing after being given due to needing a back-end or becoming too complex for a prototype.
 			\end{itemize}
 		\subsubsection*{UI implemented}
 			\begin{itemize}
@@ -105,39 +112,36 @@
 				\item Viewing and modifying personal settings/profile page
 				\item `Home' button (``UoA'').
 				\item All of the footer links and pages
-				\item Text boxes for feedback and answers can't be limited to only resizing vertically due to a bug in bootstrap and the layout of the document.
+				\item Text boxes for feedback and answers can't be limited to only resizing vertically due to a bug in Bootstrap and the layout of the document.
 				\item Viewing other categories for a course (``Files'', ``Modules'', ``People'', ``Piazza'', ``Syllabus'', and ``Quizzes'')
 			\end{itemize}
 			
 		
 \section{Colour Scheme}
-	The prototype uses a monochrome on grey-scale colour scheme as seen in \cref{fig:color}
-	\begin{figure}[H]
+	The prototype uses a monochrome on grey-scale colour scheme as seen in \cref{fig:color} on the next page.\\
+	
+	\begin{figure}[h]
 		\centering
 		\includegraphics[width=\textwidth]{Colors.PNG}
 		\caption{colour palette used for prototype}
 		\label{fig:color}
 	\end{figure}
+	
 	The palette was kept simple for a formal look with the minimal use of the blue for it to add character and emphasise what it is used on while ensuring easy reading. Blue that is a little darker was also used for the same reasons. Blue being on the lower end of the spectrum has another benefit of being less straining on the eye.\\
 	
 	High contrast was used to keep most of the text readable; however, the background is slightly grey to minimise strain on the eye. High contrast is also utilised between the navigation bar (navbar) and body of the website to distinguish them. Inverting the high contrast was used for buttons that have been selected to emphasise that fact.  The heading text is specifically black so that (in combination with being large at the top of the page) it is at the top of the contrast hierarchy; users look at it first so they know where they are.\\	
 	
-	Low contrast was used between the navbar components and footer components to help hide them so they are less distracting. Low contrast was also used to separate boxes so there is a visual distinguishable difference without distracting.
+	The low contrast was used between the navbar components and footer components to help hide them so they are less distracting. Low contrast was also used to separate boxes so there is a visually distinguishable difference without distracting.
 	
 	
 \section{Borders Scheme}
-	100-250
-	\begin{itemize}
-		\item the horizontal rules around the submission details
-		\item footer to main
-		\item nav to header
-		\item header to main
-		\item sidebar to content
-		\item | between the footer items
-	%	\item box-shadow\: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); from \url{https://www.w3schools.com/css/css3_shadows.asp}
-	\end{itemize}
+	Borders were done in three main ways; use of text justification, contrast (high, low or colour) or visible borderlines. Other ways of logically grouping items were prioritised to add character and reduce the visual confusion arising from a vast amount of complex borderlines and styles.\\
 	
+	High contrast was used to logically group the header at the top of the page from the rest of it along with a drop shadow  to `raise' it above and further emphasise the difference. Low contrast was utilised between the main part of the page and the footer, the slight difference in background colour from light grey to white is just enough to logical group footer components from the rest of the document while not being distracting. Insertion of colour (the dark blue) logically grouped the categories of course content categories from the content in the main part of the page. Blue as ``Submit'' button backgrounds also put them in the general `button' concept to the user (there is an ability to click/tap) just like the course content categories.\\
 	
+	One of the simplest ways to logical group the items was by using justification of the items and of the text. Left justification was used along the course content categories and content to both separate them with respect to each other and for internal consistency (note the items in the content. The items in the content have the same left justification and width to group them. The page title was deliberately not justified.\\
+	
+		
 \section{Fonts Scheme}
 	\begin{figure}[H]
 		\centering
@@ -153,18 +157,21 @@
 	
 	
 \section{Resources Used}
-	Footer that stays at the bottom\\ \url{https://stackoverflow.com/questions/25671073/footer-below-content-but-not-floating-mid-air-if-not-enough-content}
-	\subsection*{bootstrap}
 	\begin{itemize}
-		\item Buttons \url{https://www.w3schools.com/bootstrap/bootstrap_buttons.asp}\\Used for ``Submit'' buttons
-		\item Glyphicons \url{https://www.w3schools.com/bootstrap/bootstrap_glyphicons.asp}\\Used for thumbs-up and person
-		\item List Groups \url{https://www.w3schools.com/bootstrap/bootstrap_list_groups.asp}\\Used for list of assignments
-		\item Panels \url{https://www.w3schools.com/bootstrap/bootstrap_panels.asp}\\Used for question/feedback boxes
-		\item Collapse \url{https://www.w3schools.com/bootstrap/bootstrap_collapse.asp}\\Used for the collapsing categories of assessments
-		\item Pills \url{https://www.w3schools.com/bootstrap/bootstrap_tabs_pills.asp}\\Used for the blue side bar categories of course content
-		\item Navigation Bar \url{https://www.w3schools.com/bootstrap/bootstrap_navbar.asp}\\Used for the top navigation bar
-		\item Forms \url{https://www.w3schools.com/bootstrap/bootstrap_forms.asp}\\Used for the text entry boxes for answers/feedback
-		\item Grid \url{https://www.w3schools.com/bootstrap/bootstrap_grid_stacked_to_horizontal.asp}\\	Used for the responsive layout of the pills and main content
+		\item Footer that stays at the bottom\\ \url{https://stackoverflow.com/questions/25671073/footer-below-content-but-not-floating-mid-air-if-not-enough-content}
+		\item Drop shadow below header\\ \url{https://www.w3schools.com/css/css3_shadows.asp}	
+	\end{itemize}
+	\subsection*{Bootstrap}
+	\begin{itemize}
+		\item Buttons \url{https://www.w3schools.com/Bootstrap/Bootstrap_buttons.asp}\\Used for ``Submit'' buttons
+		\item Glyphicons \url{https://www.w3schools.com/Bootstrap/Bootstrap_glyphicons.asp}\\Used for thumbs-up and person
+		\item List Groups \url{https://www.w3schools.com/Bootstrap/Bootstrap_list_groups.asp}\\Used for list of assignments
+		\item Panels \url{https://www.w3schools.com/Bootstrap/Bootstrap_panels.asp}\\Used for question/feedback boxes
+		\item Collapse \url{https://www.w3schools.com/Bootstrap/Bootstrap_collapse.asp}\\Used for the collapsing categories of assessments
+		\item Pills \url{https://www.w3schools.com/Bootstrap/Bootstrap_tabs_pills.asp}\\Used for the blue sidebar categories of course content
+		\item Navigation Bar \url{https://www.w3schools.com/Bootstrap/Bootstrap_navbar.asp}\\Used for the top navigation bar
+		\item Forms \url{https://www.w3schools.com/Bootstrap/Bootstrap_forms.asp}\\Used for the text entry boxes for answers/feedback
+		\item Grid \url{https://www.w3schools.com/Bootstrap/Bootstrap_grid_stacked_to_horizontal.asp}\\	Used for the responsive layout of the pills and main content
 	\end{itemize}
 
 \end{document}
